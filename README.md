@@ -9,6 +9,9 @@ If you haven't yet, you're going to want to set up Parse by following the instru
 
 We use CocoaPods for dependency management [(and a whole lot of other things)](http://dev.hubspot.com/blog/architecting-a-large-ios-app-with-cocoapods). If you don't have Cocoapods, install it first: `sudo gem install cocoapods`.
 
-Then, `git clone` this repository. From the AuctionApp directory, run `pod install`, which will tell CocoaPods to grab all of the app's dependencies. Then, just open the `AuctionApp.xcworkspace` (not `AuctionApp.xcodeproj` - this will break CocoaPods) in Xcode. Edit *AuctionApp/AppDelegate.swift*, replacing `<your app id>` and `<your client key>` with the application ID and client key you copied from Parse. Run the app and you should be all set... almost!
+Then, `git clone` this repository. From the AuctionApp directory, run `pod install`, which will tell CocoaPods to grab all of the app's dependencies. Then, just open `AuctionApp.xcworkspace` (not `AuctionApp.xcodeproj` - this will break CocoaPods) in Xcode. Edit *AuctionApp/AppDelegate.swift*, replacing `<your app id>` and `<your client key>` with the application ID and client key you copied from Parse. Run the app and you should be all set... almost! 
+
+Push isn't going to work yet, but you should be able to see Test Object 7 and bid on it. If you have the Android app up and running, and already bid on the Test Object, your Android phone will receive a sassy push notification.
 
 ## Push
+Setting up push for iOS devices takes a bit of work. It's an ordeal, but a manageable ordeal, and it's been [well documented by Parse](https://parse.com/tutorials/ios-push-notifications). Follow their guide and you'll be fine!
