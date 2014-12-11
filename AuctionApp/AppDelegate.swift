@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        Parse.setApplicationId("kLPIfZauqDvVIhDOzAEVrVHJh5zMYsUvjRgcpdr4", clientKey: "ubCsiyrPMBFd3zbvU9VrixiCuqnMW4hKVY7CmE0g")
+        Parse.setApplicationId("<your app id>", clientKey: "<your client key>")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
 
