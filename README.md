@@ -11,7 +11,7 @@ We use CocoaPods for dependency management [(and a whole lot of other things)](h
 
 Then, `git clone` this repository. From the AuctionApp directory, run `pod install`, which will tell CocoaPods to grab all of the app's dependencies. Then, just open `AuctionApp.xcworkspace` (not `AuctionApp.xcodeproj` - this will break CocoaPods) in Xcode. 
 
-Edit *AuctionApp/AppDelegate.swift*, replacing `<your app id>` and `<your client key>` with the application ID and client key you copied from Parse. Run the app and you should be all set... almost! 
+Edit *AuctionApp/AppDelegate.swift*, replacing `<your app id>` and `<your client key>` with the application ID and client key you copied from Parse. Run the app and you should be all set... almost! Try bidding on something. To keep an eye on the action, check out the [Web Panel](https://github.com/HubSpot/BidHub-WebAdmin) where you can see all your items and bids.
 
 Push isn't going to work yet, but you should be able to see Test Object 7 and bid on it. If you have the Android app up and running, and already bid on the Test Object, your Android phone will receive a sassy push notification.
 
