@@ -15,5 +15,11 @@ Edit *AuctionApp/AppDelegate.swift*, replacing `<your app id>` and `<your client
 
 Push isn't going to work yet, but you should be able to see Test Object 7 and bid on it. If you have the Android app up and running, and already bid on the Test Object, your Android phone will receive a sassy push notification.
 
+## Customization
+
+There's a few HubSpot-specific images that you can change to your liking:
+* `loginBlurredBackground` is the login background
+* `AppIcon` is the app icon (you see where this is going)
+
 ## Push
 Setting up push for iOS devices takes a bit of work. It's an ordeal, but a manageable ordeal, and it's been [well documented by Parse](https://parse.com/tutorials/ios-push-notifications). Follow their guide up to Step 4 and you'll be fine. Steps 5 and beyond cover adding push to the app, which we've already done.
