@@ -1,0 +1,6 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AFViewShaker" "${PODS_ROOT}/Headers/Public/CSNotificationView" "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/NSDate+RelativeTime" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/UIImage-Resize"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/AFViewShaker" -isystem "${PODS_ROOT}/Headers/Public/CSNotificationView" -isystem "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" -isystem "${PODS_ROOT}/Headers/Public/NSDate+RelativeTime" -isystem "${PODS_ROOT}/Headers/Public/SVProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/UIImage-Resize"
+OTHER_LDFLAGS = -ObjC -l"Pods-AuctionApp-AFNetworking" -l"Pods-AuctionApp-AFViewShaker" -l"Pods-AuctionApp-CSNotificationView" -l"Pods-AuctionApp-IHKeyboardAvoiding" -l"Pods-AuctionApp-NSDate+RelativeTime" -l"Pods-AuctionApp-SVProgressHUD" -l"Pods-AuctionApp-UIImage-Resize" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

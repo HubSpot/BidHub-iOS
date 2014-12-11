@@ -1,0 +1,48 @@
+PODS:
+  - AFNetworking (HEAD based on 2.5.0):
+    - AFNetworking/NSURLConnection (= HEAD based on 2.5.0)
+    - AFNetworking/NSURLSession (= HEAD based on 2.5.0)
+    - AFNetworking/Reachability (= HEAD based on 2.5.0)
+    - AFNetworking/Security (= HEAD based on 2.5.0)
+    - AFNetworking/Serialization (= HEAD based on 2.5.0)
+    - AFNetworking/UIKit (= HEAD based on 2.5.0)
+  - AFNetworking/NSURLConnection (HEAD based on 2.5.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (HEAD based on 2.5.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (HEAD based on 2.5.0)
+  - AFNetworking/Security (HEAD based on 2.5.0)
+  - AFNetworking/Serialization (HEAD based on 2.5.0)
+  - AFNetworking/UIKit (HEAD based on 2.5.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AFViewShaker (0.0.2)
+  - CSNotificationView (0.5.2)
+  - IHKeyboardAvoiding (1.4)
+  - NSDate+RelativeTime (1.0.1)
+  - SVProgressHUD (HEAD based on 1.1.1)
+  - UIImage-Resize (1.0.1)
+
+DEPENDENCIES:
+  - AFNetworking (HEAD)
+  - AFViewShaker (~> 0.0.2)
+  - CSNotificationView (~> 0.5)
+  - IHKeyboardAvoiding (~> 1.1)
+  - NSDate+RelativeTime (~> 1.0)
+  - SVProgressHUD (HEAD)
+  - UIImage-Resize (~> 1.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
+  AFViewShaker: 40bd7a2725ea81a9472134f27f0086d398d1bf91
+  CSNotificationView: a01c96b12e4451c9ed42e93a6d494e586c91ad14
+  IHKeyboardAvoiding: b759f3fb1c995be6de74c977a6d425723fcc62bd
+  NSDate+RelativeTime: e8b48c62cd2354d9b372b3361cff579c96833b2e
+  SVProgressHUD: 11ef69ab2582c097479e76905ea916470371fc58
+  UIImage-Resize: fc57263eed2cd98f74e5ba4848bedae979a0bdf0
+
+COCOAPODS: 0.35.0

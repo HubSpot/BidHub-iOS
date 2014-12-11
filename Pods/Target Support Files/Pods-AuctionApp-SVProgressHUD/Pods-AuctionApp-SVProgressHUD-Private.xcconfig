@@ -1,0 +1,5 @@
+#include "Pods-AuctionApp-SVProgressHUD.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/SVProgressHUD" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AFViewShaker" "${PODS_ROOT}/Headers/Public/CSNotificationView" "${PODS_ROOT}/Headers/Public/IHKeyboardAvoiding" "${PODS_ROOT}/Headers/Public/NSDate+RelativeTime" "${PODS_ROOT}/Headers/Public/SVProgressHUD" "${PODS_ROOT}/Headers/Public/UIImage-Resize"
+OTHER_LDFLAGS = ${PODS_AUCTIONAPP_SVPROGRESSHUD_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
