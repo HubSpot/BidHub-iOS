@@ -1,6 +1,6 @@
 BidHub iOS
 ==============
-iOS client for HubSpot's open-source silent auction app. For an overview of the auction app project, [check out our blog post about it](http://dev.hubspot.com/coming-soon)!
+iOS client for HubSpot's open-source silent auction app. For an overview of the auction app project, [check out our blog post about it](http://dev.hubspot.com/blog/building-an-auction-app-in-a-weekend)!
 
 ![](http://i.imgur.com/qYtj1hAl.jpg)
 
