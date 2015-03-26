@@ -30,11 +30,19 @@ class BiddingViewController: UIViewController {
     var startPrice = 0
     private var state :BiddingViewControllerState = .Standard
     
+    var incrementOne = 0
+    var incrementFive = 0
+    var incrementTen = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.customBidTextField.alpha = 0.0
         
         if let itemUW = item{
+            
+            incrementOne  = itemUW.priceIncrement
+            incrementFive = 2*itemUW.priceIncrement
+            incrementTen  = 5*itemUW.priceIncrement
             
             switch(itemUW.winnerType){
             case .Multiple:
@@ -94,15 +102,15 @@ class BiddingViewController: UIViewController {
         plusTenButton.titleLabel?.textAlignment = .Center
 
         let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
-        one.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + 5)", attributes: otherAttrs))
+        one.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
         plusOneButton.setAttributedTitle(one, forState: .Normal)
         
         let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
-        five.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + 10)", attributes: otherAttrs))
+        five.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
         plusFiveButton.setAttributedTitle(five, forState: .Normal)
         
         let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
-        ten.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + 25)", attributes: otherAttrs))
+        ten.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
         plusTenButton.setAttributedTitle(ten, forState: .Normal)
         
    
@@ -158,15 +166,15 @@ class BiddingViewController: UIViewController {
     }
 
     @IBAction func bidOneDollarPressed(sender: AnyObject) {
-        didSelectAmount(.Extra(5))
+        didSelectAmount(.Extra(incrementOne))
     }
 
     @IBAction func bidFiveDollarPressed(sender: AnyObject) {
-        didSelectAmount(.Extra(10))
+        didSelectAmount(.Extra(incrementFive))
     }
     
     @IBAction func bidTenDollarPressed(sender: AnyObject) {
-        didSelectAmount(.Extra(25))
+        didSelectAmount(.Extra(incrementTen))
     }
     
     func animateIn(){
