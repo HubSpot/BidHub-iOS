@@ -2,9 +2,6 @@
 //  ItemTableViewCell.swift
 //  AuctionApp
 //
-//  Created by Eoin on 19/11/2014.
-//  Copyright (c) 2014 HubSpot. All rights reserved.
-//
 
 import UIKit
 
