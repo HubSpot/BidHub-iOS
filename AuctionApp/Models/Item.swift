@@ -15,6 +15,16 @@ class Item: PFObject, PFSubclassing {
     @NSManaged var name:String
     @NSManaged var price:Int
     
+    var priceIncrement:Int {
+        get {
+            if let priceIncrementUW = self["priceIncrement"] as? Int {
+                return priceIncrementUW
+            }else{
+                return 5
+            }
+        }
+    }
+    
     var currentPrice:[Int] {
         get {
             if let array = self["currentPrice"] as? [Int] {
