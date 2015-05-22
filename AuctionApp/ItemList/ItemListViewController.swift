@@ -134,9 +134,9 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
                 let attributes =  [NSFontAttributeName: font] as NSDictionary
                 let item = items[indexPath.row]
                 
-                let minSize = minHeightText.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes, context: nil).height
+                let minSize = minHeightText.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as [NSObject : AnyObject], context: nil).height
                 
-                let maxSize = item.itemDesctiption.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes, context: nil).height + 50
+                let maxSize = item.itemDesctiption.boundingRectWithSize(CGSize(width: (view.frame.size.width - 40), height: 1000), options: .UsesLineFragmentOrigin, attributes: attributes as [NSObject : AnyObject], context: nil).height + 50
                 
                 return (max(minSize, maxSize) + CGFloat(padding))
 
@@ -149,7 +149,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ItemTableViewCell", forIndexPath: indexPath) as ItemTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemTableViewCell", forIndexPath: indexPath) as! ItemTableViewCell
         
         return configureCellForIndexPath(cell, indexPath: indexPath)
     }
@@ -186,7 +186,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
         
         if item.quantity > 1 {
             var bidsString = ", ".join(item.currentPrice.map({bidPrice in "$\(bidPrice)"}))
-            if countElements(bidsString) == 0 {
+            if count(bidsString) == 0 {
                 bidsString = "(none yet)"
             }
             
@@ -276,7 +276,7 @@ class ItemListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func segmentBarValueChanged(sender: AnyObject) {
         searchBar.resignFirstResponder()
         searchBar.text = ""
-        let segment = sender as UISegmentedControl
+        let segment = sender as! UISegmentedControl
         switch(segment.selectedSegmentIndex) {
         case 0:
           filterTable(.All)
