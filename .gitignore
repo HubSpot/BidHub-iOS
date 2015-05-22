@@ -1,0 +1,8 @@
+
+*.xcscheme
+
+*.xcuserstate
+
+AuctionApp.xcodeproj/xcuserdata/Yaron.xcuserdatad/xcschemes/xcschememanagement.plist
+
+Pods/Pods.xcodeproj/xcuserdata/Yaron.xcuserdatad/xcschemes/xcschememanagement.plist

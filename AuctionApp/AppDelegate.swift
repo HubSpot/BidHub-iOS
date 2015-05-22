@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController=itemVC
         } else {
             //Prompt User to Login
-            let loginVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
+            let loginVC = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
             window?.rootViewController=loginVC
         }
         
