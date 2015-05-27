@@ -101,15 +101,15 @@ class BiddingViewController: UIViewController {
         plusFiveButton.titleLabel?.textAlignment = .Center
         plusTenButton.titleLabel?.textAlignment = .Center
 
-        let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
+        let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as [NSObject : AnyObject])
         one.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
         plusOneButton.setAttributedTitle(one, forState: .Normal)
         
-        let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
+        let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as [NSObject : AnyObject])
         five.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
         plusFiveButton.setAttributedTitle(five, forState: .Normal)
         
-        let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs)
+        let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as [NSObject : AnyObject])
         ten.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
         plusTenButton.setAttributedTitle(ten, forState: .Normal)
         

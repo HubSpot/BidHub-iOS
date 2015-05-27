@@ -133,7 +133,7 @@ enum FilterType: Printable {
             })
 
         case .Search(let searchTerm):
-            return NSPredicate(format: "(donorName CONTAINS[c] %@) OR (name CONTAINS[c] %@) OR (itemDesctiption CONTAINS[c] %@)", searchTerm, searchTerm, searchTerm)!
+            return NSPredicate(format: "(donorName CONTAINS[c] %@) OR (name CONTAINS[c] %@) OR (itemDesctiption CONTAINS[c] %@)", searchTerm)
         default:
             return NSPredicate(value: true)
         }

@@ -8,8 +8,8 @@ import UIKit
 @objc(InsetBlurModalSeque) class InsetBlurModalSeque: UIStoryboardSegue {
     
     override func perform() {
-        let sourceViewController = self.sourceViewController as UIViewController
-        let destinationViewController = self.destinationViewController as UIViewController
+        let sourceViewController = self.sourceViewController as! UIViewController
+        let destinationViewController = self.destinationViewController as! UIViewController
         
         // Make sure the background is ransparent
         destinationViewController.view.backgroundColor = UIColor.clearColor()

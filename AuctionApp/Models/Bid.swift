@@ -12,7 +12,7 @@ class Bid: PFObject, PFSubclassing {
     
     var amount: Int {
         get {
-            return self["amt"] as Int
+            return self["amt"] as! Int
         }
         set {
             self["amt"] = newValue
@@ -21,7 +21,7 @@ class Bid: PFObject, PFSubclassing {
     
     var itemId: String {
         get {
-            return self["item"] as String
+            return self["item"] as! String
         }
         set {
             self["item"] = newValue
@@ -41,8 +41,11 @@ class Bid: PFObject, PFSubclassing {
         self.itemId = itemId
     }
     
-    override class func load() {
-        self.registerSubclass()
+    override class func initialize() {
+        var onceToken : dispatch_once_t = 0;
+        dispatch_once(&onceToken) {
+            self.registerSubclass()
+        }
     }
     
     class func parseClassName() -> String! {
