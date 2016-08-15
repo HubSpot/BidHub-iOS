@@ -94,22 +94,21 @@ class BiddingViewController: UIViewController {
         
         startPrice = startAmount
         
-        var bidAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 14.0)! , NSForegroundColorAttributeName: UIColor.grayColor()] as NSDictionary
-        var otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 24.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
+        let bidAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 14.0)! , NSForegroundColorAttributeName: UIColor.grayColor()] as NSDictionary
+        let otherAttrs = [NSFontAttributeName : UIFont(name: "Avenir-Light", size: 24.0)!, NSForegroundColorAttributeName: UIColor(red: 33/225, green: 161/225, blue: 219/225, alpha: 1)]
         
         plusOneButton.titleLabel?.textAlignment = .Center
         plusFiveButton.titleLabel?.textAlignment = .Center
         plusTenButton.titleLabel?.textAlignment = .Center
-
-        let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as [NSObject : AnyObject])
+        let one = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as? [String:AnyObject])
         one.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementOne)", attributes: otherAttrs))
         plusOneButton.setAttributedTitle(one, forState: .Normal)
         
-        let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as [NSObject : AnyObject])
+        let five = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as? [String:AnyObject])
         five.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementFive)", attributes: otherAttrs))
         plusFiveButton.setAttributedTitle(five, forState: .Normal)
         
-        let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as [NSObject : AnyObject])
+        let ten = NSMutableAttributedString(string: "BID\n", attributes: bidAttrs as? [String:AnyObject])
         ten.appendAttributedString(NSMutableAttributedString(string: "$\(startAmount + incrementTen)", attributes: otherAttrs))
         plusTenButton.setAttributedTitle(ten, forState: .Normal)
         
@@ -152,7 +151,7 @@ class BiddingViewController: UIViewController {
         
         switch state {
         case .Custom:
-            if let amount = customBidTextField.text.toInt(){
+            if let amount = Int(customBidTextField.text!){
                 didSelectAmount(.Custom(amount))
             }else{
                 didTapBackground("")

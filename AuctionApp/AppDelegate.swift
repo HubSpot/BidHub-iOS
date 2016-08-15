@@ -57,7 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         
-        println("tokenString: \(tokenString)")
+        print("tokenString: \(tokenString)")
         
         currentInstalation.setDeviceTokenFromData(deviceToken)
         currentInstalation.saveInBackgroundWithBlock(nil)
