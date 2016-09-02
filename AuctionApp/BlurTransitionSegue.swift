@@ -8,8 +8,8 @@ import UIKit
 @objc(InsetBlurModalSeque) class InsetBlurModalSeque: UIStoryboardSegue {
     
     override func perform() {
-        let sourceViewController = self.sourceViewController as! UIViewController
-        let destinationViewController = self.destinationViewController as! UIViewController
+        let sourceViewController = self.sourceViewController 
+        let destinationViewController = self.destinationViewController 
         
         // Make sure the background is ransparent
         destinationViewController.view.backgroundColor = UIColor.clearColor()
@@ -17,14 +17,14 @@ import UIKit
         // Take screenshot from source VC
         UIGraphicsBeginImageContext(sourceViewController.view.bounds.size)
         sourceViewController.view.drawViewHierarchyInRect(sourceViewController.view.frame, afterScreenUpdates:true)
-        var image:UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let image:UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
         // Blur screenshot
                 
 //        var blurredImage:UIImage = image.applyBlurWithRadius(5, tintColor: UIColor(white: 1.0, alpha: 0.0), saturationDeltaFactor: 1.3, maskImage: nil)
         
-        var blurredImage:UIImage = image
+        let blurredImage:UIImage = image
 
         
         // Crop screenshot, add to view and send to back

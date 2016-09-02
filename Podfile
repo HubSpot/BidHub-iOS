@@ -3,8 +3,8 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 target 'AuctionApp' do
-  pod 'AFNetworking', :head
-  pod 'SVProgressHUD', :head
+  pod 'AFNetworking', '~> 3.0'
+  pod 'SVProgressHUD' 
   pod "AFViewShaker", "~> 0.0.2"
   pod 'IHKeyboardAvoiding', '~> 1.1'
   pod 'NSDate+RelativeTime', '~> 1.0'

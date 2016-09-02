@@ -28,7 +28,7 @@ class DataManager: NSObject {
         query.addAscendingOrder("name")
         query.findObjectsInBackgroundWithBlock { (results, error) -> Void in
             if error != nil{
-                println("Error!! \(error)")
+                print("Error!! \(error)")
                 completion([Item](), error)
             }else{
                 if let itemsUW = results as? [Item] {
@@ -58,7 +58,7 @@ class DataManager: NSObject {
             
             if error != nil {
                 
-                if let errorString:String = error.userInfo?["error"] as? String{
+                if let errorString:String = error.userInfo["error"] as? String{
                     completion(false, errorCode: errorString)
                 }else{
                     completion(false, errorCode: "")
@@ -94,7 +94,7 @@ class DataManager: NSObject {
 }
 
 
-enum FilterType: Printable {
+enum FilterType: CustomStringConvertible {
     case All
     case NoBids
     case MyItems
